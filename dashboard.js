@@ -55,6 +55,8 @@ async function getData() {
     dataArr.push(doc.data());
 
     console.log(dataArr);
+
+    renderCard()
     
 
   
@@ -76,6 +78,9 @@ function renderCard() {
          cardRender.innerHTML = ''
          cardRender.innerHTML += `
         
+        <div class="mt-5 border mx-[30px] sm:mx-[70px]lg:mx-[70px] p-[30px] shadow-lg rounded-xl">
+        
+        
         <div class="flex flex-wrap">
         
         <div>
@@ -94,23 +99,11 @@ function renderCard() {
         <div class="mt-4">
         <p>${item.blogDescription}</p>
         </div>
-        
-        
-        <div class="flex mt-4">
-        <div>
-        <button class="btn btn-primary">Delete</button>
-        
-        </div>
-        
-        <div>
-        <button class="btn btn-primary">edit</button>
-        
-        </div>
         `;
        });
      }
 
-     renderCard();
+    //  renderCard();
    
 
 
@@ -184,17 +177,17 @@ logouBtn.addEventListener("click", () => {
     //     </div>
         
         
-    //     <div class="flex mt-4">
-    //     <div>
-    //     <button class="btn btn-primary">Delete</button>
+    // //     <div class="flex mt-4">
+    // //     <div>
+    // //     <button class="btn btn-primary">Delete</button>
         
-    //     </div>
+    // //     </div>
         
-    //     <div>
-    //     <button class="btn btn-primary">edit</button>
+    // //     <div>
+    // //     <button class="btn btn-primary">edit</button>
         
-    //     </div>
-    //     </div>`;
+    // //     </div>
+    // //     </div>`;
 //   });
 // }
 
