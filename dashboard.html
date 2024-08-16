@@ -37,7 +37,7 @@
         <div class="w-10 rounded-full">
           <img
             alt="Tailwind CSS Navbar component"
-            src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWUem1ykMgZrm7P2GNRhID1fnipTWf1kQ1dA&s" />
         </div>
       </div>
       <ul
@@ -76,21 +76,24 @@
    
 <div class="mt-5 border mx-[30px] sm:mx-[70px]lg:mx-[70px] p-[30px] shadow-lg rounded-xl">
     <div class="text-center">
-        <input
+        <form id="form">
+
+          <input
   type="text"
   placeholder="Placeholder"
-  class="input input-bordered input-xs w-full max-w-xl p-[15px]" /><br/>
+  class="input input-bordered input-xs w-full max-w-xl p-[15px]" id="placeholder" required /><br/>
 
 <input
   type="text"
   placeholder="What is in your mind?"
-  class="input input-bordered input-lg w-full max-w-xl mt-3" /><br/>
+  class="input input-bordered input-lg w-full max-w-xl mt-3" id="description" required /><br/>
     </div>
 
 
   <div class="text-center">
-    <button class="btn btn-primary text-[#ffff] mt-4 ">Publish Blog</button>
+    <button type="submit" class="btn btn-primary text-[#ffff] mt-4 ">Publish Blog</button>
   </div>
+        </form>
 
 
 
@@ -110,43 +113,9 @@
     </div>
 
 
-    <div class="mt-5 border mx-[30px] sm:mx-[70px]lg:mx-[70px] p-[30px] shadow-lg rounded-xl">
-   
+  
 
-        <div class="flex flex-wrap">
-
-             <div>
-            <img class="m-7 " src="men image.jpeg" alt="">
-        </div>
-
-        <div class="flex-wrap">
-            <h1 class="font-bold text-2xl mt-5">Lorem ipsum dolor so quisquam.</h1>
-            <h1 class="mt-4"><span>Ashar khan</span> -  21 August 2024</h1>
-        </div>
-
-
-        </div>
-
-
-        <div class="mt-4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odio. Eaque illo velit quos odit nam recusandae illum obcaecati cum saepe. Non est saepe quo molestias omnis, pariatur voluptate quos?
-            Natus autem cumque necessitatibus quos quidem doloribus quaerat provident ratione officiis repellendus, dolor recusandae aperiam fuga, adipisci deleniti consectetur quo id perspiciatis amet vitae, quisquam ipsa. Eveniet similique aperiam consequatur.
-            Temporibus, mollitia. Sequi quo temporibus dolorem eligendi adipisci aut sunt saepe, quae consequatur quos voluptatem qui, id ad molestiae corrupti numquam. Natum iluptatibus.
-            Culpa suscilicabo deserunt, rem corporis obcaecati perferendis quae tempora consequatur? Deserunt provident voluptate recusandae voluptas, a officiis, quibusdam dolor expedita corrupti, quia alias reprehenderit? Nulla?</p>
-        </div>
-
-
-        <div class="flex mt-4">
-            <div>
-                <button class="btn btn-primary">Delete</button>
-
-            </div>
-
-            <div>
-                <button class="btn btn-primary">edit</button>
-
-            </div>
-        </div>
+    <div id="card-publish"></div>
 
        
 
@@ -174,6 +143,6 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 
-    <script src="dashboard.js"></script>
+    <script type="module" src="dashboard.js"></script>
 </body>
 </html>
