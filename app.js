@@ -49,6 +49,23 @@ async function getData() {
   querySnapshot.forEach((doc) => {
     console.log(doc.data());
     allBlogs.push(doc.data())
+
+    function render() {
+      mainDiv.innerHTML+=`<p class="text-[black]">Loading...</p>`
+      mainDiv.innerHTML = "";
+      allBlogs.map((item) => {
+
+        mainDiv.innerHTML += `<div class="card bg-[#eef0eb]  w-[100%] shadow-2xl mx-[10px] border border-[2px] mt-4" >
+       <div class="card-body">
+    <h2 class="card-title">Title: ${item.title}</h2>
+    <p> Description: ${item.blogDescription}</p>
+  </div>
+  <div/>`;
+      });
+    }
+
+    render();
+
     
     
   });
@@ -61,34 +78,3 @@ getData()
 
 
 
-function render(){
-
-
-  allBlogs.map((item)=>{
-
-    mainDiv.innerHTML=""
-
-    mainDiv.innerHTML += `
-        <div class="flex-wrap">
-            <h1 class="font-bold text-2xl mt-5"></h1>
-            <h1 class="mt-4"><span>Ashar khan</span> -  21 August 2024</h1>
-        </div>
-
-
-        </div>
-
-
-        <div class="mt-4">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, odio. Eaque illo velit quos odit nam recusandae illum obcaecati cum saepe. Non est saepe quo molestias omnis, pariatur voluptate quos?
-            Natus autem cumque necessitatibus quos quidem doloribus quaerat provident ratione officiis repellendus, dolor recusandae aperiam fuga, adipisci deleniti consectetur quo id perspiciatis amet vitae, quisquam ipsa. Eveniet similique aperiam consequatur.
-            Temporibus, mollitia. Sequi quo temporibus dolorem eligendi adipisci aut sunt saepe, quae consequatur quos voluptatem qui, id ad molestiae corrupti numquam. Natum iluptatibus.
-            Culpa suscilicabo deserunt, rem corporis obcaecati perferendis quae tempora consequatur? Deserunt provident voluptate recusandae voluptas, a officiis, quibusdam dolor expedita corrupti, quia alias reprehenderit? Nulla?</p>
-        </div>`;
-
-  })
-
-
-
-
-  
-}
